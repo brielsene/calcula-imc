@@ -31,6 +31,7 @@ public class CadastraPessoa extends HttpServlet {
 		request.setAttribute("nome", p.getNome());
 		request.setAttribute("peso", p.getPeso());
 		request.setAttribute("altura", p.getAltura());
+		
 
 		b.adicionaPessoa(p);
 

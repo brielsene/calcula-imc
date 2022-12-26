@@ -1,25 +1,20 @@
 
-<%
-String nome = (String) request.getAttribute("nome");
-String peso = String.valueOf(request.getAttribute("peso"));
-String altura = String.valueOf(request.getAttribute("altura"));
-String imc = String.valueOf(request.getAttribute("imc"));
-String descricao = (String) request.getAttribute("descricao");
-
-
-%>
+ 
 
 <html><body>
 
-Nome: <%=nome %>
+Nome: ${nome }
 <br></br>
-Peso: <%=peso %>
+Peso: ${peso }
 <br></br>
-Altura: <%=altura %>
+Altura: ${altura }
 <br></br>
-IMC: <%=imc%>
+IMC: ${imc }
 <br></br>
-Descrição: <%=descricao%>
+Descrição: ${descricao }
+<br></br>
+
+
 
 
 

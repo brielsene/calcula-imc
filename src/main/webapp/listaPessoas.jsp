@@ -14,6 +14,7 @@
     	lista.sort((l1, l2)->l2.getNome().compareTo(l1.getNome()));
     	for (Pessoa pessoa : lista) { 
     %>
+        
         <li><%= pessoa.getNome() %></li>
         <li><%= pessoa.getPeso() %></li>
         <li><%= pessoa.getAltura() %></li>

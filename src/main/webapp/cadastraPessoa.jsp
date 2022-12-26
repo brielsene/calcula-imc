@@ -1,6 +1,6 @@
 <html><body>
 
-<form action="/calcula-imc/cadastraPessoa">
+<form action="/calcula-imc/cadastraPessoa" method="post">
 
 Nome: <input type="text"  name="nome"/>
 <br></br>
