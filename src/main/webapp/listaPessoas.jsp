@@ -3,6 +3,7 @@
     <%@page import="java.util.List" %>
     <%@ page import="br.com.calculo.imc.modelo.*" %>
     <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,9 +14,11 @@
 	<c:forEach items="${lista}" var="lista">
 <!-- a Expression Language facilita pra gente, então não precisamos chamar o método com o get, basta colocar o nome sem o get -->
 <!-- e com letra minúscula -->
+		<fmt:formatDate value="${lista.dataCadastramento }" pattern="dd/MM/yyyy"/>
 		<li>${lista.nome }</li>
 		<li>${lista.peso }</li>
 		<li>${lista.altura }</li>
+		
 		<br></br>
 		
 		

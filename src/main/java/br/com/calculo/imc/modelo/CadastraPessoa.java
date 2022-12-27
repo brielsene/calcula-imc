@@ -1,6 +1,9 @@
 package br.com.calculo.imc.modelo;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -26,13 +29,31 @@ public class CadastraPessoa extends HttpServlet {
 		Pessoa p = new Pessoa(request.getParameter("nome"), Double.parseDouble(request.getParameter("peso")),
 				Double.parseDouble(request.getParameter("altura")));
 		Banco b = new Banco();
+		
+		String dataCadastro = (String) request.getAttribute("data");
+		
+		Date dataDeCadastro = null;
+		
+//		try {
+//			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+//			dataDeCadastro = sdf.parse(dataCadastro);
+//		} catch (ParseException e) {
+//			throw new ServletException(e);
+//		}
+//		
+//		p.setDataCadastramento(dataDeCadastro);
 
 		RequestDispatcher rd = request.getRequestDispatcher("/view.jsp");
 		request.setAttribute("nome", p.getNome());
 		request.setAttribute("peso", p.getPeso());
 		request.setAttribute("altura", p.getAltura());
+		request.setAttribute("data", p.getDataCadastramento());
 		
-
+		
+		
+		
+		
+		 
 		b.adicionaPessoa(p);
 
 		Pessoa p2 = new Pessoa("Gabriel", 85, 1.82);
